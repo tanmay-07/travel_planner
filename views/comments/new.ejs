@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+	<link rel="stylesheet" type="text/css" href="/newTrip.css">
+   <h1 class="text-center">Add a New comment to <%=trip.place%></h1>
+    <div class="row">
+       
+        <div class="container" id="form1">
+          
+            <form action="/trips/<%=trip._id%>/comments" method="POST">
+                <div class="input-group form-group">
+                    <label for="comment[text]" id ="sizing-addon1" class="input-group-addon">Comment</label>
+                    <input type="text" class="form-control" name="comment[text]" placeholder="Enter your comment" aria-describedby="sizing-addon1">    
+                </div>
+                <div class="input-group form-group">
+                    <span for="comment[author]" id="img-addon" class="input-group-addon">Author</span>
+                    <input type="text" name="comment[author]" class="form-control" placeholder="Enter your name" aria-describedby="img-addon">    
+                </div>
+                <div class="input-group form-group">
+                    <input type="submit" class="btn btn-primary btn-block" name="submit">
+                </div>
+            </form> 
+            <a href="/trips/<%=trip._id%>">Go Back</a>
+        </div>
+    
+    
+</div>
+<% include ../partials/footer %>
