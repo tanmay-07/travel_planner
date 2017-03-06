@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+<div class="container">
+    <h1><%=trip.place %></h1>
+    <img src="<%=trip.img%>" class ="img-responsive"></img>
+    <h3>Cost per Person: ₹<%= trip.cost%></h3>
+    <a href="/trips" class="btn btn-default">Go Back</a>
+</div>
+<div class="container">
+    <h3>Comments</h3>
+    <p>
+        <a class="btn btn-success" href="/trips/<%=trip._id%>/comments/new">Add a New Comment</a>
+    </p>
+    <% trip.comments.forEach(function(comment){ %>
+        <p>
+            <%=comment.text%> - <strong><%=comment.author%></strong>
+        </p>
+    <% });%>
+</div>
+
+<% include ../partials/footer %>
