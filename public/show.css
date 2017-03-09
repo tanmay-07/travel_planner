@@ -1,0 +1,17 @@
+body{
+    color:black;
+}
+.thumbnail{
+    padding:0;
+    border-radius:15px;
+}
+.caption-full{
+    padding:20px;
+}
+img{
+    width:100%;
+    border-radius:15px;
+}
+h1{
+    color:white;
+}

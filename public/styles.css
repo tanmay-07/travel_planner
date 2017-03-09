@@ -1,6 +1,7 @@
 body{
-	background-color: #D3D3D3;
+	background-color: #2E4372;
 	margin:0;
+	color:white;
 }
 
 nav{
@@ -16,4 +17,15 @@ i{
 }
 #about{
 	width:90%;
+}
+.thumbnail{
+    padding:0;
+    border-radius:10px;
+}
+form{
+	color:black;
+}
+img{
+    width:100%;
+    border-radius:10px;
 }

@@ -18,6 +18,15 @@
 					<li><a href="/trips">Trips</a></li>
 					<li><a href="/contact">Contact Us</a></li>
 				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<% if(!currentUser){ %>
+					<li><a href="/register">Sign Up</a></li>
+					<li><a href="/login">Login</a></li>
+					<% }else{ %>
+					<li><a href="#">Hi <%=currentUser.username%></a></li>
+					<li><a href="/logout">Logout</a></li>
+					<% } %>
+				</ul>
 			</div>
 		</div>
 	</nav>

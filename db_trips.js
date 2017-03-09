@@ -4,6 +4,14 @@ var tripsSchema = mongoose.Schema({
    place: String,
    img: String,
    cost: Number,
+   description: String,
+   author:{
+       id:{
+           type:mongoose.Schema.Types.ObjectId,
+           ref:"User"
+       },
+       username: String
+   },
    comments:[
            {
             type:mongoose.Schema.Types.ObjectId,
@@ -12,5 +20,4 @@ var tripsSchema = mongoose.Schema({
        ]
 });
 //SETTING UP MONGOOSE MODEL
-var Trip  = mongoose.model("Trip", tripsSchema);
-module.exports = Trip;
+module.exports = mongoose.model("Trip", tripsSchema);
